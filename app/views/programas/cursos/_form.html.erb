@@ -1,0 +1,9 @@
+
+<%= simple_form_for [@programa, @curso] do |f| %>
+
+<div class="inputNewArea">
+  <div class="form-group">
+  <%= f.text_field :ficha, placeholder:"ingrese numero de ficha", id:"inputNewArea" ,required:"true"%>
+</div>
+<%= f.submit "Guardar", class:"botonNewArea", id:"botonNewArea" %> 
+<% end %>

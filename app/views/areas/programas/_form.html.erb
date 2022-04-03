@@ -1,0 +1,9 @@
+<%= simple_form_for [@area, @programa] do |f| %>
+
+<div class="inputNewArea">
+  <div class="form-group">
+    <%= f.text_field :nombre, placeholder:"ingrese nombre del programa",
+    id:"inputNewArea" ,required:"true"%>
+  </div>
+  <%= f.submit "Guardar", class:"botonNewArea", id:"botonNewArea" %> <% end %>
+</div>

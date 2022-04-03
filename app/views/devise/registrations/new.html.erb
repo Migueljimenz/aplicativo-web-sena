@@ -1,0 +1,31 @@
+<section class="vistaRegistro">
+  <article class="registro">
+    <h2>Registrarse</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="inicio">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Correo Electronico", id:"inputEmail",required:true %>
+  </div>
+
+  <div class="inicio">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"Contraseña",id:"inputPassword",required:true %>
+  </div>
+
+  <div class="inicio">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Confirme su contraseña", id:"InputConfirmationPass",required:true %>
+  </div>
+
+  <div class="BotonRegistro">
+    <%= f.submit "Registrarse" , id:"BotonRegistro"%>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+  </article>
+</section>

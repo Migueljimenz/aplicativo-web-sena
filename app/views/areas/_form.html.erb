@@ -1,0 +1,11 @@
+<%= simple_form_for @area do |f| %>
+  <div class="inputNewArea">
+    <div class="form-group">
+      <%= f.input :avatar, as: :file, label: false, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :nombreArea, placeholder:"ingrese nombre del area", id:"inputNewArea", required:true%>
+    </div>
+    <%= f.submit "Guardar" , class:"botonNewArea", id:"botonNewArea"%>
+      <% end %>
+  </div>

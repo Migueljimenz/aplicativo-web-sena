@@ -1,0 +1,29 @@
+<body>
+  <header>
+    <%= link_to root_path do %>
+      <%= image_tag "logo-sena.ico",:alt => "Logo", :class => "logoNav"%>
+    <% end %>
+  
+    <nav>
+      <ul class="nav__links">
+        <li><%= link_to "Inicio", root_path %></li>
+        <!--  <li><a href="#">Areas</a></li>
+        <li><a href="#">Programas</a></li>
+        <li><a href="#">Cursos</a></li> -->
+        <li>
+          <%= link_to "Cerrar sesion", destroy_user_session_path, method:
+          :delete, class:"cta"%>
+        </li>
+      </ul>
+    </nav>
+    <p class="menu cta">Menu</p>
+  </header>
+  <div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+      <a href="#">Areas</a>
+      <a href="#">Programas</a>
+      <a href="#">Cursos</a>
+    </div>
+  </div>
+</body>

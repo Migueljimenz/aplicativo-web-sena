@@ -1,0 +1,16 @@
+<%= render 'layouts/navbar' %>
+
+<section id="newArea">
+  <aside class="OpcionesArea">
+    <div class="LinkAreas" id="LinkAreas">
+      <i class="fa fa-chevron-circle-left" aria-hidden="true" id="Icono"></i>
+      <%= link_to "Regresar", areas_path, method: :get, class:
+      "IndexArea"%>
+    </div>
+  </aside>
+ <article>
+  <legend id="titleNewArea">Registrar Programa</legend>
+  <%= render "form" %>
+ </article>
+</section>
+<%= render 'layouts/footer' %>

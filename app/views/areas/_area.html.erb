@@ -1,0 +1,27 @@
+<tbody>
+  <tr>
+    <td>
+      <div  id="imagen">
+        <nav id="menu">
+          <ul>
+            <li><i class="fa fa-bars" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <%= button_to 'Editar' , edit_area_url(area), :method=> :get,form: {data: {turbo_confirm: 'Desea editar esta Area'} }, id:"opctionMenu"%>
+                </li>
+                <li>
+                  <%= button_to 'Eliminar' , area, method: :delete, form: {data:
+                    {turbo_confirm: 'Desea eliminar esta Area' } }, id:"opctionMenu"%>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a href="<%= area_programas_url(area) %>" class="link" >
+          <%= image_tag area.avatar_url if area.avatar.present? %>
+        </a>
+      </div>
+      <%= button_to area.nombreArea, area_programas_url(area), method: :get, id:"nombreArea"%>
+    </td>
+  </tr>
+</tbody>

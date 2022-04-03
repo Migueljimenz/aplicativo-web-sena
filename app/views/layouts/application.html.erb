@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>https://www.AppRuby.com</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <%= csrf_meta_tags %> 
+    <%= csp_meta_tag %> 
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
+    <%= javascript_importmap_tags %>
+
+</head>
+
+<body class="vistaInicio">
+  <main>
+    <%= yield %>
+      <% flash.each do |key, value| %>
+        <div class="alert <%= flash_class(key)%>" id="flash-alert" onclick="cerrar()">
+          <%= value %>
+            <!--  <button class="close" onclick="cerrar()">&times;</button> -->
+        </div>
+        <% end %>
+  </main>
+  <script>
+    /*  function cerrar(){
+      document.getElementById("flash-alert").style.display = "none"; 
+    } */
+
+    setTimeout(() => {
+      document.getElementById("flash-alert").style.display = "none";
+    }, 3000); 
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ficha: 1
+  fecha_entrada: 2022-03-23 15:24:11
+  programa: one
+
+two:
+  ficha: 1
+  fecha_entrada: 2022-03-23 15:24:11
+  programa: two

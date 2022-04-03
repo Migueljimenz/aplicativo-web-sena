@@ -1,0 +1,10 @@
+<tr>
+  <td id="line2"><%= curso.ficha %></td>
+  <td id="botonesAccion">
+    <%= button_to 'Editar', edit_programa_curso_url(@programa,curso),
+    :method => :get, id:"BotonAccion",form: {data: {turbo_confirm: 'Desea editar este ficha'} } %>
+    
+    <%= button_to 'Eliminar', programa_curso_url(@programa,curso),
+    :method => :delete, id:"BotonAccion", form: {data: {turbo_confirm: 'Desea eliminar esta ficha'} } %>
+  </td>
+</tr>
