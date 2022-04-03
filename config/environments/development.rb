@@ -34,9 +34,17 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = { host: "localhost:3000" }
-  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :letter_opener
 
-  
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'localhost:3000',
+    user_name:             'webaplicativo39@gmail.com',
+    password:               'qiawddtnkuistdur',
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    }
 
   
   # Store uploaded files on the local file system (see config/storage.yml for options).
