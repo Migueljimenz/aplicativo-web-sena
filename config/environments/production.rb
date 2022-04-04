@@ -12,7 +12,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'https://aplicativowebsena.herokuapp.com',
+    domain:               'myproyectdomain.com',
     user_name:           'webaplicativo39@gmail.com',
     password:               'qiawddtnkuistdur',
     authentication:       'plain',
