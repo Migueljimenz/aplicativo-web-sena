@@ -12,9 +12,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'myproyectdomain.com',
-    user_name:           'webaplicativo39@gmail.com',
-    password:               'qiawddtnkuistdur',
+    domain:               'aplicativowebsena.com',
+    user_name:            Rails.application.credentials.dig(:google_smtp, :email),
+    password:             Rails.application.credentials.dig(:google_smtp, :password),
     authentication:       'plain',
     enable_starttls_auto: true,
     }
