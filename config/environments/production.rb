@@ -13,8 +13,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'aplicativowebsena.com',
-    user_name:            Rails.application.credentials.dig(:google_smtp, :email),
-    password:             Rails.application.credentials.dig(:google_smtp, :password),
+    user_name:           'webaplicativo39@gmail.com',
+    password:               'qiawddtnkuistdur',
     authentication:       'plain',
     enable_starttls_auto: true,
     }
